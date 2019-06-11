@@ -42,10 +42,6 @@ def longest_tree_path(root, parent_val=-1, cur_len=None, maxlen=None):
         if cur_len > maxlen:
             maxlen = cur_len
 
-    # no children, terminate the recursive call
-    if root.children is None or len(root.children) == 0:
-        return maxlen
-
     # check maxlen for all the children of the current node
     for node in root.children:
         # recurse all the way!
